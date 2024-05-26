@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rrdtool-bindings"
+description = "Modern Python packaging for RRDtool C bindings."
+version = "0.2.0.dev0"
+
+authors = [
+  {name = "Christian Kroeger"},
+  {name = "Hye-Shik Chang"},
+]
+maintainers = [
+  {name = "Scott Searcy"},
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)",
+  "Operating System :: POSIX",
+  "Programming Language :: C",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "GPL-2.0-or-later"}
+keywords = ["rrdtool"]
+
+[project.urls]
+Homepage = "https://github.com/smsearcy/rrdtool-python-bindings"
+Source = "https://github.com/smsearcy/rrdtool-python-bindings"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+testing = [
+  "pytest>=8.2.1",
+]
+ruff = [
+  "ruff>=0.4.6",
+]
+dev = [
+  "pre-commit>=3.5.0",
+]
+
+[tool.ruff.lint]
+select = [
+  # pyflakes
+  "F",
+  # pycodestyle
+  "E", "W",
+  # mccabe
+  "C90",
+  # isort
+  "I",
+  # pep8-naming
+  "N",
+  # pydocstyle
+  "D",
+  # flake8-2020
+  "YTT",
+  # flake8-bugbear"
+  "B",
+  # flake8-builtins
+  "A",
+  # pylint
+  "PLC", "PLE", "PLR", "PLW",
+  # flake8-comprehensions
+  "C4",
+  # flake8-return
+  "RET",
+  # flake8-simplify
+  "SIM",
+]
+ignore = [
+  "A003",  # builtin-attribute-shadowing
+  "D105",  # magic-method
+  "D107",  # public-init
+  "D203",  # one-blank-line-before-class
+  "D213",  # multi-line-summary-second-line
+  "PLR2004",  # magic-value-comparison
+]
