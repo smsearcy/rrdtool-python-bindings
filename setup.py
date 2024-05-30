@@ -13,7 +13,7 @@ setup(
     ext_modules=[
         Extension(
             name="rrdtool",
-            sources=["src/rrdtoolmodule.c"],
+            sources=["src/rrdtool/rrdtoolmodule.c"],
             libraries=["rrd"],
         )
     ]

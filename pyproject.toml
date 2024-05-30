@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
+requires = ["setuptools>=64", "setuptools_scm>=8", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "rrdtool-bindings"
 description = "Modern Python packaging for RRDtool C bindings."
-version = "0.2.0.dev0"
+version = "0.2.0.dev1"
 
 authors = [
   {name = "Christian Kroeger"},
@@ -34,6 +34,9 @@ keywords = ["rrdtool"]
 [project.urls]
 Homepage = "https://github.com/smsearcy/rrdtool-python-bindings"
 Source = "https://github.com/smsearcy/rrdtool-python-bindings"
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pdm]
 distribution = true
