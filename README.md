@@ -4,17 +4,18 @@ Python bindings from [RRDtool](https://oss.oetiker.ch/rrdtool),
 packaged to work with modern Python packaging tools.
 
 Spiritual successor to [python-rrdtool](https://pypi.org/project/rrdtool/),
-which has not been updated since 2022 and the GitHub project was archived in 2023,
-so I created this project.
+which has not been updated since 2022 and the GitHub project was archived in 2023.
+It failed to install/compile via `uv` or `pdm` on recent Fedora releases,
+so this project was born.
 
 Supported Python versions: 3.8+
 
 ## Installation
 
-This compiles the bindings, so it requires the following packages:
+This package compiles the bindings, so it requires the following dependencies:
 
-* Debian/Ubuntu: `apt-get install -y librrd-dev`
-* Fedora/Red Hat: `dnf install -y rrdtool-devel`
+* Debian/Ubuntu: `apt-get install -y gcc librrd-dev python3-dev`
+* Fedora/Red Hat: `dnf install -y gcc rrdtool-devel python3-devel`
 
 Then run:
 
@@ -38,7 +39,7 @@ See [rrdpython](https://oss.oetiker.ch/rrdtool/prog/rrdpython.en.html) and `test
 
 ## History
 
-### v0.2.0 - Unreleased
+### v0.2.0 - 2024-05-31
 
 Initial release.
 
