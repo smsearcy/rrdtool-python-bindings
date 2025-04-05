@@ -8,7 +8,7 @@ which has not been updated since 2022 and the GitHub project was archived in 202
 It failed to install/compile via `uv` or `pdm` on recent Fedora releases,
 so this project was born.
 
-Supported Python versions: 3.8+
+Supported Python versions: 3.9+
 
 ## Installation
 
@@ -51,11 +51,11 @@ Uses the C code from [5JAN24](https://github.com/oetiker/rrdtool-1.x/blob/b39df9
 Changes to the C code should be submitted [upstream](https://github.com/oetiker/rrdtool-1.x),
 then copied to this repository.
 
-This project uses [PDM](https://pdm-project.org/latest/),
+This project uses [uv](https://docs.astral.sh/uv/),
 so you will need that installed first.
-Then fork/clone the repository and run `pdm install`.
-Wheels can be compiled locally via `pdm build`.
+Then fork/clone the repository and run `uv sync`.
+Wheels can be compiled locally via `uv build`.
 
 [`just`](https://github.com/casey/just) is used as a task runner for convenience,
 but it is optional,
-any of the commands in `justfile` can be ran by hand.
+any of the commands in `Justfile` can be ran by hand.

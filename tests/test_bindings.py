@@ -9,6 +9,7 @@ NOTE: these tests need to be run sequentially!!!
 from pathlib import Path
 
 import pytest
+
 import rrdtool
 
 DAY = 86400

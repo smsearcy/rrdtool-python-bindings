@@ -1,34 +1,28 @@
 [build-system]
-requires = ["setuptools>=64", "setuptools_scm>=8", "wheel"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "rrdtool-bindings"
 description = "Modern Python packaging for RRDtool Python bindings to C extension."
-version = "0.2.0"
+version = "0.3.0.dev0"
 
-authors = [
-  {name = "Christian Kroeger"},
-  {name = "Hye-Shik Chang"},
-]
-maintainers = [
-  {name = "Scott Searcy"},
-]
+authors = [{ name = "Christian Kroeger" }, { name = "Hye-Shik Chang" }]
+maintainers = [{ name = "Scott Searcy" }]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
-  "License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)",
   "Operating System :: POSIX",
   "Programming Language :: C",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 dependencies = []
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 readme = "README.md"
-license = {text = "GPL-2.0-or-later"}
+license = "GPL-2.0-or-later"
 keywords = ["rrdtool"]
 
 [project.urls]
@@ -38,26 +32,16 @@ Source = "https://github.com/smsearcy/rrdtool-python-bindings"
 [tool.setuptools.packages.find]
 where = ["src"]
 
-[tool.pdm]
-distribution = true
-
-[tool.pdm.dev-dependencies]
-testing = [
-  "pytest>=8.2.1",
-]
-ruff = [
-  "ruff>=0.4.6",
-]
-dev = [
-  "pre-commit>=3.5.0",
-]
+[dependency-groups]
+dev = ["pytest==8.*", "ruff==0.11.*"]
 
 [tool.ruff.lint]
 select = [
   # pyflakes
   "F",
   # pycodestyle
-  "E", "W",
+  "E",
+  "W",
   # mccabe
   "C90",
   # isort
@@ -73,7 +57,10 @@ select = [
   # flake8-builtins
   "A",
   # pylint
-  "PLC", "PLE", "PLR", "PLW",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
   # flake8-comprehensions
   "C4",
   # flake8-return
@@ -82,10 +69,10 @@ select = [
   "SIM",
 ]
 ignore = [
-  "A003",  # builtin-attribute-shadowing
-  "D105",  # magic-method
-  "D107",  # public-init
-  "D203",  # one-blank-line-before-class
-  "D213",  # multi-line-summary-second-line
-  "PLR2004",  # magic-value-comparison
+  "A003",    # builtin-attribute-shadowing
+  "D105",    # magic-method
+  "D107",    # public-init
+  "D203",    # one-blank-line-before-class
+  "D213",    # multi-line-summary-second-line
+  "PLR2004", # magic-value-comparison
 ]
