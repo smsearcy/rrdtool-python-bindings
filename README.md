@@ -39,6 +39,14 @@ See [rrdpython](https://oss.oetiker.ch/rrdtool/prog/rrdpython.en.html) and `test
 
 ## History
 
+### v0.3.1 - 2025-04-07
+
+Update change history in README.
+
+### v0.3.0 - 2025-04-07
+
+Update supported Python versions.
+
 ### v0.2.0 - 2024-05-31
 
 Initial release.
