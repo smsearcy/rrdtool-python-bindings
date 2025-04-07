@@ -27,5 +27,11 @@ tests:
   uv run pytest
 
 # Build/Publish package (just sdist)
-publish: build
-  uv publish
+release tag:
+  git rev-parse --abbrev-ref HEAD | awk '$1 != "main" {print "Must be on `main` branch"; exit 1}'
+  @echo 'Creating release {{ tag }}'
+  rm -f dist/*.tar.gz
+  git tag {{ tag }}
+  uv build --sdist
+  uv publish dist/*.tar.gz
+  git push origin {{ tag }}
