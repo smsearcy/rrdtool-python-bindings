@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rrdtool-bindings"
 description = "Modern Python packaging for RRDtool Python bindings to C extension."
-version = "0.3.0.dev0"
+version = "0.3.0"
 
 authors = [{ name = "Christian Kroeger" }, { name = "Hye-Shik Chang" }]
 maintainers = [{ name = "Scott Searcy" }]
