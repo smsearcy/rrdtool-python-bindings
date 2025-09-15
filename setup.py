@@ -1,15 +1,10 @@
 """Instructions for setuptools to build the rrdtool bindings."""
 
-import os
 import platform
 import subprocess
 import sys
 
 from setuptools import Extension, setup
-
-# on Fedora it wanted `gcc-11`, which didn't exist
-if subprocess.run(["command -v gcc-11"], shell=True, check=False).returncode > 0:
-    os.environ["CC"] = "gcc"
 
 extra_compile_args = []
 
