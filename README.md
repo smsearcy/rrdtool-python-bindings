@@ -39,6 +39,10 @@ See [rrdpython](https://oss.oetiker.ch/rrdtool/prog/rrdpython.en.html) and `test
 
 ## History
 
+### v0.4.0 - 2025-09-15
+
+Fix for Debian 13 (Trixie).
+
 ### v0.3.1 - 2025-04-07
 
 Update change history in README.
