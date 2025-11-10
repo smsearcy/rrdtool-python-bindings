@@ -8,7 +8,7 @@ which has not been updated since 2022 and the GitHub project was archived in 202
 It failed to install/compile via `uv` or `pdm` on recent Fedora releases,
 so this project was born.
 
-Supported Python versions: 3.9+
+Supported Python versions: 3.10+
 
 ## Installation
 
@@ -38,6 +38,11 @@ rrdtool.update('test.rrd', 'N:32')
 See [rrdpython](https://oss.oetiker.ch/rrdtool/prog/rrdpython.en.html) and `tests/test_bindings.py` for more examples.
 
 ## History
+
+### v0.5.0 - Unreleased
+
+Add support for Python 3.14.
+Drop support for end-of-life Python 3.9.
 
 ### v0.4.0 - 2025-09-15
 

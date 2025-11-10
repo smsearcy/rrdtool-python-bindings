@@ -45,13 +45,12 @@ jobs:
       - name: Run Ruff formatter
         run: uv run ruff format --diff .
 
-
   pytest:
     name: Python ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
         # ubuntu-20.04 thru ubuntu-24.04 all have RRDtool 1.7.2
         os: [ubuntu-latest]
 
