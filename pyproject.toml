@@ -33,7 +33,10 @@ Source = "https://github.com/smsearcy/rrdtool-python-bindings"
 where = ["src"]
 
 [dependency-groups]
-dev = ["pytest==8.*", "ruff==0.11.*"]
+dev = [
+    "pytest==8.*",
+    "ruff==0.14.*",
+]
 
 [tool.ruff.lint]
 select = [
