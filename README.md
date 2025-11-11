@@ -39,22 +39,23 @@ See [rrdpython](https://oss.oetiker.ch/rrdtool/prog/rrdpython.en.html) and `test
 
 ## History
 
-### v0.5.0 - Unreleased
+### v0.5.0 - 2025-11-10
 
-Add support for Python 3.14.
-Drop support for end-of-life Python 3.9.
+* Add support for Python 3.14.
+* Drop support for end-of-life Python 3.9.
+* Add Linux platform check prior to check for Debian 13.
 
 ### v0.4.0 - 2025-09-15
 
-Fix for Debian 13 (Trixie).
+* Fix for Debian 13 (Trixie).
 
 ### v0.3.1 - 2025-04-07
 
-Update change history in README.
+* Update change history in README.
 
 ### v0.3.0 - 2025-04-07
 
-Update supported Python versions.
+* Update supported Python versions.
 
 ### v0.2.0 - 2024-05-31
 
